@@ -11,10 +11,9 @@ class Scraper:
             if(tag == 'id'):
                 job_elems = soup.find(id=id_or_class)
             else:
+                job_elems = soup.find("div", class_=id_or_class)
 
 
-
-            job_elems = soup.find("div", class_='lyricbox')
     
             print(job_elems.prettify())
             return job_elems  

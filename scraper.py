@@ -10,7 +10,7 @@ class Scraper:
         job_elems = 0
         if(tag == 'id'):
             job_elems = soup.find(id=id_or_class)
-        if(tag == 'class'):
+        else if(tag == 'class'):
             job_elems = soup.find(html_elm, class_=id_or_class)
 
 
